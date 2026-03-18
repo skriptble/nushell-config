@@ -1,0 +1,67 @@
+# starship.toml - Cross-shell prompt configuration
+# Replaces powerlevel10k from the ZSH setup.
+#
+# Lives in this repo alongside the nushell config.
+# env.nu sets STARSHIP_CONFIG to point here.
+
+format = """
+$directory\
+$git_branch\
+$git_status\
+$golang\
+$rust\
+$zig\
+$php\
+$nodejs\
+$cmd_duration\
+$line_break\
+$character"""
+
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+
+[directory]
+truncation_length = 3
+truncate_to_repo = true
+style = "bold cyan"
+
+[git_branch]
+format = "[$symbol$branch(:$remote_branch)]($style) "
+symbol = " "
+style = "bold purple"
+
+[git_status]
+format = '([\[$all_status$ahead_behind\]]($style) )'
+style = "bold red"
+
+[golang]
+format = "[$symbol($version)]($style) "
+symbol = "🐹 "
+style = "bold cyan"
+
+[rust]
+format = "[$symbol($version)]($style) "
+symbol = "🦀 "
+style = "bold red"
+
+[zig]
+format = "[$symbol($version)]($style) "
+symbol = "⚡ "
+style = "bold yellow"
+
+[php]
+format = "[$symbol($version)]($style) "
+symbol = "🐘 "
+style = "bold blue"
+
+[nodejs]
+format = "[$symbol($version)]($style) "
+symbol = " "
+style = "bold green"
+detect_extensions = []
+
+[cmd_duration]
+min_time = 2_000
+format = "[$duration]($style) "
+style = "bold yellow"
