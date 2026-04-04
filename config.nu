@@ -27,7 +27,7 @@ $env.config = {
 
     # Editing
     edit_mode: emacs
-    use_kitty_protocol: false
+    use_kitty_protocol: true
     highlight_resolved_externals: true
 
     # Table display

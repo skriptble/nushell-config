@@ -5,6 +5,8 @@
 # env.nu sets STARSHIP_CONFIG to point here.
 
 format = """
+$username\
+$hostname\
 $directory\
 $git_branch\
 $git_status\
