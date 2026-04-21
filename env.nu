@@ -70,6 +70,9 @@ if ("/opt/homebrew/bin" | path exists) {
 # Personal bin
 path add ($env.HOME | path join "bin")
 
+# Composer bin
+path add ($env.HOME | path join ".config/composer/vendor/bin")
+
 # GNU coreutils (if installed via Homebrew)
 let gnubin = "/usr/local/opt/coreutils/libexec/gnubin"
 if ($gnubin | path exists) { path add $gnubin }

@@ -47,9 +47,9 @@ $env.config = {
     error_style: "fancy"
 
     # rm → trash by default (safer)
-    rm: {
-        always_trash: true
-    }
+    # rm: {
+    #     always_trash: true
+    # }
 
     # Hooks
     hooks: {

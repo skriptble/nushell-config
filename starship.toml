@@ -7,6 +7,7 @@
 format = """
 $username\
 $hostname\
+${env_var.ZMS_SESSION}\
 $directory\
 $git_branch\
 $git_status\
@@ -67,3 +68,9 @@ detect_extensions = []
 min_time = 2_000
 format = "[$duration]($style) "
 style = "bold yellow"
+
+[env_var.ZMX_SESSION]
+symbol = " "
+format = "[$symbol$env_value]($style) "
+description = "zms session name"
+style = "bold magenta"
