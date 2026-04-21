@@ -92,3 +92,8 @@ path add ($env.BUN_INSTALL | path join "bin")
 
 # LM Studio CLI
 path add ($env.HOME | path join ".lmstudio" "bin")
+
+# Add Go on Linux
+if ("/usr/local/go" | path exists) {
+    path add "/usr/local/go/bin"
+}
