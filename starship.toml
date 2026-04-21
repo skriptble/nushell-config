@@ -7,7 +7,7 @@
 format = """
 $username\
 $hostname\
-${env_var.ZMS_SESSION}\
+${env_var.ZMX_SESSION}\
 $directory\
 $git_branch\
 $git_status\
