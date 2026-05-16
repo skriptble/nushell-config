@@ -97,3 +97,8 @@ path add ($env.HOME | path join ".lmstudio" "bin")
 if ("/usr/local/go" | path exists) {
     path add "/usr/local/go/bin"
 }
+
+# Add .local/bin
+if ($env.HOME | path join ".local/bin" | path exists) {
+    path add ($env.HOME | path join ".local/bin")
+}
